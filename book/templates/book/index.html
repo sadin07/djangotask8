@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Book Reviews{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Book Reviews</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'booklist' %}">Book List</a></li>
+                <li><a href="{% url 'authorlist' %}">Author List</a></li>
+            </ul>
+            <form method="get" action="{% url 'search' %}" style="display: inline;">
+            <input type="text" name="q" placeholder="Search books or authors">
+            <button type="submit">Search</button>
+    </form>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Book Reviews. All rights reserved.</p>
+    </footer>
+</body>
+</html>

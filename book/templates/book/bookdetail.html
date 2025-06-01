@@ -1,0 +1,46 @@
+{% extends 'book/index.html' %}
+{% load static %}
+{% block title %}Book Detail{% endblock %} 
+{% block content %}
+<style>
+li:hover {
+    background-color: #f0f8ff;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+.author-name {
+    font-size: 1.3em;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+</style>
+    <header>
+        <h1>Book Detail</h1>
+    </header>
+    
+       <div class ="container"> 
+        <h2>{{ book.title }}</h2>
+        <p>Author: {{ book.author.name }}</p>
+        <p>Published Date: {{ book.published_date }}</p>
+        <p>ISBN: {{ book.isbn }}</p>
+        <h3>Reviews:</h3>
+        <ul>
+            {% for review in book.review_set.all %}
+            <li>
+                <strong>Rating:{{ review.rating }}/5</strong><br>Review:{{ review.review_text }}
+            </li>
+            {% empty %}
+            <li>No reviews yet.</li>
+            {% endfor %}
+        </ul>
+        </div>
+        
+{% endblock %}
