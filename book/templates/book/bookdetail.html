@@ -22,15 +22,17 @@ li:hover {
 }
 
 </style>
-    <header>
-        <h1>Book Detail</h1>
-    </header>
+    
+    
     
        <div class ="container"> 
+        <h1>Book Detail</h1>
+        <hr>
         <h2>{{ book.title }}</h2>
         <p>Author: {{ book.author.name }}</p>
         <p>Published Date: {{ book.published_date }}</p>
         <p>ISBN: {{ book.isbn }}</p>
+        <hr>
         <h3>Reviews:</h3>
         <ul>
             {% for review in book.review_set.all %}

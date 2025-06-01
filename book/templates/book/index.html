@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Book Reviews{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+     <style>
+        body {
+            background-image: url("{% static 'images/background.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+             background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,9 +33,9 @@
                 <li><a href="{% url 'authorlist' %}">Author List</a></li>
             </ul>
             <form method="get" action="{% url 'search' %}" style="display: inline;">
-            <input type="text" name="q" placeholder="Search books or authors">
-            <button type="submit">Search</button>
-    </form>
+             <input type="text" name="q" placeholder="Search books or authors">
+             <button type="submit">Search</button>
+            </form>
         </nav>
     </header>
     <main>

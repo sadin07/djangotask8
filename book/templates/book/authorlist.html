@@ -4,8 +4,9 @@
 {% block content %}
  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
   <h1>Author List</h1>
-  <a>Explore our collection of authors and their works.</a>
+  <p>Explore our collection of authors and their works.</p>
 <h1>Authors</h1>
+<div class="list">
   <ul>
     {% for author in authors %}
       <li>
@@ -25,4 +26,5 @@
       <li>No authors available.</li>
     {% endfor %}
   </ul>
+</div>
 {% endblock %}

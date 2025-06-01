@@ -4,6 +4,7 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 <h1>Books</h1>
+<div class="list">
   <ul>
     {% for book in books %}
       <li>
@@ -16,4 +17,5 @@
       <li>No books available.</li>
     {% endfor %}
   </ul>
+</div>
 {% endblock %}

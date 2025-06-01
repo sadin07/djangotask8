@@ -2,21 +2,28 @@ h1 {
     font-size: 2em;
     margin-bottom: 20px;
 }
+p{
+   color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
 
-ul {
+}
+.list .ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-li {
+.list li {
     margin-bottom: 15px;
     font-size: 1.1em;
 }
 
-a {
-    color: #0077cc;
+.list a {
+    color: #031522;
     text-decoration: none;
     font-weight: bold;
+    font-size:25px;
 }
 
 a:hover {
