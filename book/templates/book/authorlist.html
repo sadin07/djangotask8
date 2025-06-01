@@ -12,14 +12,16 @@
       <li>
         <a>{{ author.name }}</a>
         <br>
-        Books:
+        <div class="container">
         <ul>
+         <h1>Books:</h1>
           {% for book in author.book_set.all %}
             <li><a href="{% url 'bookdetail' book.id %}">{{ book.title }}</a></li>
           {% empty %}
             <li>No books available.</li>
           {% endfor %}
         </ul>
+        </div>
         <hr>
       </li>
     {% empty %}

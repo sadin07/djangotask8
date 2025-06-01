@@ -2,9 +2,10 @@
 {% load static %}
 {% block title %}Book Detail{% endblock %} 
 {% block content %}
+ 
 <style>
 li:hover {
-    background-color: #f0f8ff;
+    background-color:rgb(144, 179, 209);
     transition: background-color 0.3s ease;
     border-radius: 4px;
 }
@@ -14,6 +15,7 @@ li:hover {
 }
 .container {
     max-width: 800px;
+    background-color: rgba(130, 86, 183, 0.34);
     margin: auto;
     padding: 20px;
     background-color: #fff;
@@ -39,6 +41,7 @@ li:hover {
             <li>
                 <strong>Rating:{{ review.rating }}/5</strong><br>Review:{{ review.review_text }}
             </li>
+            <hr>
             {% empty %}
             <li>No reviews yet.</li>
             {% endfor %}

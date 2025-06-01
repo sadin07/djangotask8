@@ -30,6 +30,18 @@ a:hover {
     text-decoration: underline;
 }
 
+.container{
+   background-color: rgba(130, 86, 183, 0.34); 
+   border-radius: 15px;
+
+}
+.container ul h1{
+    font-size: 15px;
+    font-weight: bold;
+}
+.container ul li a{
+    font-size: 20px;
+}
 hr {
     border: 0;
     border-top: 1px solid #ccc;
